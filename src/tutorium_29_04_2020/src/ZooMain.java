@@ -1,6 +1,4 @@
-package tutorium_29_04_2020;
-
-public class Main {
+public class ZooMain {
 
     public static void main(String[] args) {
         Tier[] zoo = new Tier[10];

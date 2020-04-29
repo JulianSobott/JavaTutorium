@@ -1,5 +1,3 @@
-package tutorium_29_04_2020;
-
 public class Giraffe extends Tier{
     int halsLaenge;
 
