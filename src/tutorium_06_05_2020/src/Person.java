@@ -11,7 +11,12 @@ class Person {
         this.alter = alter;
     }
 
+    public String toString() {
+        return getBeschreibung();
+    }
+
+    // public String toString()
     String getBeschreibung() {
-        return "Person: " + this.name + ", " + this.adresse + " " + this.alter;
+        return "Person: name: " + this.name + " alter: " + this.alter + " adresse: " + this.adresse;
     }
 }

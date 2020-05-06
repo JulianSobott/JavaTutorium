@@ -9,7 +9,10 @@ public class Main {
         System.out.println(p1.adresse);
 
         // Werte ändern
-        p1.neuesAlter(10);
+        p1.neuesAlter(20);
+        System.out.println(p1.alter);
+
+        String beschreibung = p1.getBeschreibung();
         p1.neueAdresse("Aalen");
         System.out.println(p1.getBeschreibung());
         p1.neueAdresse("Essen");
