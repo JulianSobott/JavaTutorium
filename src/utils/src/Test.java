@@ -1,6 +1,14 @@
+import java.util.Scanner;
+
 public class Test {
 
     public static void main(String[] args) {
+        System.out.print("sad: ");
+
+        Scanner s = new Scanner(System.in);
+        String ssr = s.nextLine();
+        System.out.println(ssr);
+
         // String
         String s1 = Input.readLine();
         System.out.println(s1);
@@ -12,7 +20,7 @@ public class Test {
         int i1 = Input.readInt();
         System.out.println(i1);
 
-        int i2 = Input.readInt("Enter a number");
+        int i2 = Input.readInt("Enter a number: ");
         System.out.println(i2);
     }
 }
