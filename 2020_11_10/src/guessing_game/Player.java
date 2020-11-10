@@ -13,4 +13,8 @@ public abstract class Player {
     public String getName() {
         return name;
     }
+
+    public void createCertificate() {
+        System.out.printf("Player %s successfully participated in a guessing game.", this.name);
+    }
 }

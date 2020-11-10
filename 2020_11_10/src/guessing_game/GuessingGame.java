@@ -17,8 +17,9 @@ public class GuessingGame {
 
         game.generateNumber();
         int idxCurrentPlayer = 0;
+        Player currentPlayer;
         while (true) {
-            Player currentPlayer = players.get(idxCurrentPlayer);
+            currentPlayer = players.get(idxCurrentPlayer);
             System.out.printf("%nNext player is: %s%n", currentPlayer.getName());
             int guess = currentPlayer.getNumber();
             System.out.println(currentPlayer.getName() + " guessed: " + guess);
@@ -30,6 +31,7 @@ public class GuessingGame {
             }
             idxCurrentPlayer = (idxCurrentPlayer+1) % 2;
         }
+        currentPlayer.createCertificate();
     }
 
     private void generateNumber() {
