@@ -16,23 +16,19 @@ public class GuessingGame {
         players.add(pHuman);
 
         game.generateNumber();
+        int idxCurrentPlayer = 0;
         while (true) {
-            int humanGuess = pHuman.getNumber();
-            if (game.checkNumber(humanGuess)) {
-                System.out.println(pHuman.getName() + " won");
+            Player currentPlayer = players.get(idxCurrentPlayer);
+            System.out.printf("%nNext player is: %s%n", currentPlayer.getName());
+            int guess = currentPlayer.getNumber();
+            System.out.println(currentPlayer.getName() + " guessed: " + guess);
+            if (game.checkNumber(guess)) {
+                System.out.println(currentPlayer.getName() + " won");
                 break;
             } else {
-                System.out.println(pHuman.getName() + " guessed wrong");
+                System.out.println(currentPlayer.getName() + " guessed wrong");
             }
-
-            int aiGuess = pAi.getNumber();
-            System.out.println("Ai guessed: " + aiGuess);
-            if (game.checkNumber(aiGuess)) {
-                System.out.println(pAi.getName() + " won");
-                break;
-            } else {
-                System.out.println(pAi.getName() + " guessed wrong");
-            }
+            idxCurrentPlayer = (idxCurrentPlayer+1) % 2;
         }
     }
 
