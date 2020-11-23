@@ -18,10 +18,13 @@ public class Comparisons {
 //        c.objects();
 //        c.complex();
 //        c.standard();
+
+        OtherMistakes o = new OtherMistakes();
+        o.strings();
     }
 
     void strings() {
-        System.out.println("Strings:\n=========");
+        topic("Strings");
         String a = new String("test");
         String b = new String("test");
 
@@ -34,7 +37,7 @@ public class Comparisons {
     }
 
     void objects() {
-        System.out.println("Objects:\n=========");
+        topic("Objects");
         int a = 10;
         int b = 10;
 
@@ -49,7 +52,7 @@ public class Comparisons {
     }
 
     void complex() {
-        System.out.println("Complex:\n=========");
+        topic("Complex");
         MyNumber num1 = new MyNumber(10);
         MyNumber num2 = new MyNumber(10);
 
@@ -62,7 +65,7 @@ public class Comparisons {
 
     void standard() {
         // https://github.com/elastic/elasticsearch/search?q=%22return+null%22
-        System.out.println("Standard:\n=========");
+        topic("Standard");
         AClass a = new AClass();
         MyNumber x = new MyNumber(10);
         print("x.equals(a.getMyNumber())", x.equals(a.getMyNumber()));  // a)
@@ -81,4 +84,11 @@ public class Comparisons {
         System.out.printf("%15s: %b%n", s, x);
     }
 
+    void topic(String s) {
+        String underline = "=";    // :
+        for (int i = 0; i < s.length(); i++) {
+            underline += "=";
+        }
+        System.out.println("\n" + s + ": \n" + underline);
+    }
 }
