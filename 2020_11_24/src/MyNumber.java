@@ -1,9 +1,14 @@
 public class MyNumber {
 
     private int i = 10;
+    private String name = "kjj";
 
     public MyNumber(int i) {
         this.i = i;
+    }
+
+    public String blb() {
+        return "blb";
     }
 
     @Override
@@ -13,8 +18,6 @@ public class MyNumber {
 
         MyNumber myNumber = (MyNumber) o;
 
-        if (i != myNumber.i) return false;
-
-        return true;
+        return i == myNumber.i;
     }
 }

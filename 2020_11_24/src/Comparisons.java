@@ -7,16 +7,20 @@ public class Comparisons {
     |Test |X |X |X |X |X |X |X |X |X |X |X |X |X |X |Test |
     |1    |2 |3 |4 |5 |6 |7 |8 |9 |10|11|12|13|14|15|16   |
      ^                                               ^
+     a
+     c
 
+    ==
+    .equals
      */
 
 
     public static void main(String[] args) {
         Comparisons c = new Comparisons();
 
-        c.strings();
+//        c.strings();
 //        c.objects();
-//        c.complex();
+        c.complex();
 //        c.standard();
 
         OtherMistakes o = new OtherMistakes();
@@ -48,7 +52,8 @@ public class Comparisons {
 
         print("a1.equals(b1)", a1.equals(b1));     // b)
         print("a1 == b1", a1 == b1);            // c)
-        print("a1.equals(10)", a1.equals(10));     // d)
+        Integer k = new Integer(10);
+        print("a1.equals(10)", a1.equals(k));     // d)
     }
 
     void complex() {
